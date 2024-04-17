@@ -1,6 +1,6 @@
-"use client";
-import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+'use client';
+import Image from 'next/image';
+import React, { useEffect, useRef, useState } from 'react';
 
 function AudioStreamComponent() {
   const playerRef = useRef<HTMLAudioElement | null>(null);
@@ -27,10 +27,10 @@ function AudioStreamComponent() {
   // };
 
   return (
-    <main className="min-h-screen bg-white flex items-center justify-between">
-      <div className="flex flex-col lg:flex-row items-center justify-between px-10 h-[85vh] gap-10">
-        <div className="lg:flex-[2] rounded-3xl overflow-hidden h-full">
-          <div className="h-full relative">
+    <main className="flex min-h-screen items-center justify-between bg-white">
+      <div className="flex h-[85vh] flex-col items-center justify-between gap-10 px-10 lg:flex-row">
+        <div className="h-full overflow-hidden rounded-3xl lg:flex-[2]">
+          <div className="relative h-full">
             <Image
               src="/default-audio-image.jpg"
               alt="Image audio"
@@ -38,16 +38,16 @@ function AudioStreamComponent() {
               height={5000}
               className="h-[100vh] object-cover object-center saturate-150"
             />
-            <div className="absolute bottom-0 right-0 left-0 gap-3 px-5 top-0 transition-colors duration-300 hover:bg-black/20 flex items-end">
+            <div className="absolute bottom-0 left-0 right-0 top-0 flex items-end gap-3 px-5 transition-colors duration-300 hover:bg-black/20">
               <input
                 type="text"
-                className="my-3 w-[68vw] rounded-2xl py-1 px-5 text-black"
+                className="my-3 w-[68vw] rounded-2xl px-5 py-1 text-black"
                 placeholder="share your thinking..."
               />
               <audio
                 ref={playerRef}
                 controls
-                className="py-3 mb-2 md:mb-0"
+                className="mb-2 py-3 md:mb-0"
               ></audio>
               {/* <div
                  onClick={onHandleOpenMicro}
@@ -61,7 +61,7 @@ function AudioStreamComponent() {
             </div>
           </div>
         </div>
-        <div className="w-full lg:flex-1 h-full rounded-3xl overflow-hidden transition-shadow duration-300 hover:shadow-lg border border-gray-20">
+        <div className="border-gray-20 h-full w-full overflow-hidden rounded-3xl border transition-shadow duration-300 hover:shadow-lg lg:flex-1">
           <div className=""></div>
         </div>
       </div>
