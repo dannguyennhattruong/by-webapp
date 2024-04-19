@@ -3,7 +3,7 @@ import React from "react";
 
 function HomePage() {
   return (
-    <main className="min-h-screen bg-white flex items-center justify-between"></main>
+    <main className="flex min-h-screen items-center justify-between bg-white"></main>
   );
 }
 
