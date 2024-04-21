@@ -8,7 +8,7 @@ export default async function Header({ lang }: { lang: Locale }) {
 
   return (
     <header className="py-6">
-      <nav className="container flex items-center justify-between">
+      <nav className="container mx-auto flex items-center justify-between">
         <ul className="flex gap-x-8">
           <li>
             <Link href={`/${lang}`}>{navigation.home}</Link>

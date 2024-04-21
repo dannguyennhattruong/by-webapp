@@ -33,7 +33,7 @@ function AudioStreamComponent({ contentLocale }: Props) {
   // };
 
   return (
-    <main className="my-10 min-h-screen">
+    <main className="mb-10 min-h-screen">
       <div className="flex flex-col items-center bg-white py-10">
         <h1 className="text-3xl font-bold text-black">{contentLocale.title}</h1>
         <p className="italic text-gray-600">{contentLocale.description}</p>
