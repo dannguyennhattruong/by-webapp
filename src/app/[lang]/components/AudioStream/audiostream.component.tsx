@@ -9,7 +9,6 @@ interface Props {
 }
 
 function AudioStreamComponent({ contentLocale }: Props) {
-  console.log("contentLocale: ", contentLocale);
   const playerRef = useRef<HTMLAudioElement | null>(null);
   const [isAudioPlayed, setIsAudioPlayed] = useState(false);
 
