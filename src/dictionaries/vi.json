@@ -1,0 +1,16 @@
+{
+  "navigation": {
+    "home": "Trang chủ",
+    "audio-stream": "Audio Stream"
+  },
+  "page": {
+    "home": {
+      "title": "Chào mừng đến với BY",
+      "description": "Mạng xã hội âm nhạc"
+    },
+    "audio-stream": {
+      "title": "Audio Stream",
+      "description": "Đây là trang Audio Stream"
+    }
+  }
+}

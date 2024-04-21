@@ -1,0 +1,16 @@
+{
+  "navigation": {
+    "home": "Home",
+    "audio-stream": "Audio Stream"
+  },
+  "page": {
+    "home": {
+      "title": "Welcome to BY",
+      "description": "Audio Network"
+    },
+    "audio-stream": {
+      "title": "Audio Stream",
+      "description": "This is the Audio Stream page"
+    }
+  }
+}
