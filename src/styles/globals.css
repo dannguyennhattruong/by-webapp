@@ -1,29 +1,72 @@
 @tailwind base;
 @tailwind components;
+
+.swiper {
+  @apply py-10;
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  @apply h-10 w-10 rounded-full bg-py-peach-fuzz bg-opacity-60 text-sm text-py-orange backdrop-blur-sm md:h-12 md:w-12;
+}
+
+.swiper .swiper-slide .animate-appear {
+  @apply h-0 translate-y-[50vh] opacity-0 transition-all ease-in-out;
+}
+
+.swiper .swiper-slide.swiper-slide-active .animate-appear {
+  @apply h-fit translate-y-0 opacity-100;
+}
+
+.swiper .swiper-slide .animate-appear-trailer {
+  @apply w-0 translate-x-[120%] opacity-0 transition-all duration-[2500ms] ease-in-out;
+}
+
+.swiper .swiper-slide.swiper-slide-active .animate-appear-trailer {
+  @apply w-fit translate-x-0 opacity-100;
+}
+
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+  @apply rounded-full bg-py-peach-fuzz bg-opacity-60 p-3 text-py-orange backdrop-blur-sm md:h-7 md:w-7;
+}
+
+.swiper .swiper-button-prev:after,
+.swiper .swiper-button-next:after {
+  @apply rounded-full text-2xl;
+}
+
+.swiper .swiper-slide.swiper-slide-active img {
+  @apply scale-125;
+}
+
 @tailwind utilities;
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255; */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
 @layer utilities {
