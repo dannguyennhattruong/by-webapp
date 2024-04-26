@@ -15,7 +15,7 @@ export default function LocaleSwitcher() {
   };
 
   return (
-    <div className="flex h-auto w-10 items-center justify-center rounded-md bg-py-peach-fuzz px-3 py-2 text-sm text-white hover:opacity-80">
+    <div className="bg-by-peach-fuzz flex h-auto w-10 items-center justify-center rounded-md px-3 py-2 text-sm text-white hover:opacity-80">
       <Link href={redirectedPathName(initialLocale === "vi" ? "en" : "vi")}>
         {initialLocale}
       </Link>

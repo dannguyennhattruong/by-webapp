@@ -21,7 +21,7 @@ function StreamingUser() {
               className="h-10 w-10 rounded-full object-cover"
             />
             <div className="flex w-full flex-col items-start">
-              <h3 className="text-sm font-semibold text-py-orange">
+              <h3 className="text-by-orange text-sm font-semibold">
                 {user.title}
               </h3>
               <div className="flex w-full flex-wrap justify-between gap-3">

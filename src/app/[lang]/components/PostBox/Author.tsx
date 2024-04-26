@@ -13,7 +13,7 @@ function Author() {
       />
       <div className="flex flex-col items-start">
         <h3 className="text-sm font-semibold">Lii Lii</h3>
-        <p className="text-xs text-py-orange">US-UK Music list</p>
+        <p className="text-by-orange text-xs">US-UK Music list</p>
       </div>
     </div>
   );

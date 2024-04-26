@@ -14,10 +14,10 @@ function Account() {
         />
         <div className="flex flex-col items-start">
           <h3 className="text-sm font-semibold">Uyen Phuong</h3>
-          <p className="text-xs text-py-orange">@uynhphng</p>
+          <p className="text-by-orange text-xs">@uynhphng</p>
         </div>
       </div>
-      <p className="text-xs font-semibold text-py-orange">Switch</p>
+      <p className="text-by-orange text-xs font-semibold">Switch</p>
     </div>
   );
 }

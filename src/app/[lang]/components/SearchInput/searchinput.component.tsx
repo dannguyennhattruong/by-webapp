@@ -6,7 +6,7 @@ function SearchInput() {
   return (
     <div className="relative hidden md:block">
       <input
-        className="h-9 w-[20rem] rounded-full bg-py-light-peach-fuzz px-10 text-sm text-py-peach-fuzz outline-none placeholder:text-py-peach-fuzz/60"
+        className="text-by-peach-fuzz placeholder:text-by-peach-fuzz/60 bg-by-light-peach-fuzz h-9 w-[20rem] rounded-full px-10 text-sm outline-none"
         placeholder="Search"
       />
       <IoFilter

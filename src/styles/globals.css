@@ -7,7 +7,7 @@
 
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
-  @apply h-10 w-10 rounded-full bg-py-peach-fuzz bg-opacity-60 text-sm text-py-orange backdrop-blur-sm md:h-12 md:w-12;
+  @apply bg-by-peach-fuzz text-by-orange h-10 w-10 rounded-full bg-opacity-60 text-sm backdrop-blur-sm md:h-12 md:w-12;
 }
 
 .swiper .swiper-slide .animate-appear {
@@ -28,7 +28,7 @@
 
 swiper-container::part(button-prev),
 swiper-container::part(button-next) {
-  @apply rounded-full bg-py-peach-fuzz bg-opacity-60 p-3 text-py-orange backdrop-blur-sm md:h-7 md:w-7;
+  @apply bg-by-peach-fuzz text-by-orange rounded-full bg-opacity-60 p-3 backdrop-blur-sm md:h-7 md:w-7;
 }
 
 .swiper .swiper-button-prev:after,
@@ -49,6 +49,7 @@ swiper-container::part(button-next) {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 /* @media (prefers-color-scheme: dark) {

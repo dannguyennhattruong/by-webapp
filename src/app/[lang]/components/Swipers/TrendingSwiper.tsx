@@ -39,7 +39,7 @@ function TrendingSwiper() {
             />
           </div>
           {activeIndex === index ? (
-            <button className="absolute bottom-0 left-0 right-0 w-full scale-125 bg-py-white/60">
+            <button className="bg-by-white/60 absolute bottom-0 left-0 right-0 w-full scale-125">
               The Weeknd’s list
             </button>
           ) : (
@@ -71,6 +71,8 @@ function TrendingSwiper() {
             },
           }}
           centeredSlides
+          centeredSlidesBounds
+          loop
           freeMode
           style={{ zIndex: "0" }}
           onSlideChange={(currentswiper) => {
