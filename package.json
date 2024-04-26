@@ -15,13 +15,17 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@headlessui/react": "^1.7.19",
     "@types/negotiator": "^0.6.3",
+    "axios": "^1.6.8",
     "negotiator": "^0.6.3",
     "next": "14.2.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-icons": "^5.1.0",
     "react-query": "^3.39.3",
     "server-only": "^0.0.1",
+    "swiper": "^11.1.1",
     "zod": "^3.22.5"
   },
   "devDependencies": {

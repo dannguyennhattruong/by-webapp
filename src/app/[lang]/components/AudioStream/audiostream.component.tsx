@@ -34,11 +34,11 @@ function AudioStreamComponent({ contentLocale }: Props) {
 
   return (
     <main className="mb-10 min-h-screen">
-      <div className="flex flex-col items-center bg-white py-10">
-        <h1 className="text-3xl font-bold text-black">{contentLocale.title}</h1>
+      <div className="flex flex-col items-center py-10">
+        <h1 className="text-3xl font-bold">{contentLocale.title}</h1>
         <p className="italic text-gray-600">{contentLocale.description}</p>
       </div>
-      <div className="flex items-center justify-between bg-white">
+      <div className="flex items-center justify-between">
         <div className="flex h-[85vh] flex-col items-center justify-between gap-10 px-10 lg:flex-row">
           <div className="h-full overflow-hidden rounded-3xl lg:flex-[2]">
             <div className="relative h-full">
