@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { Autoplay, FreeMode, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import banner from "/public/postbox_image.jpeg";
-import { Swiper as SwiperType } from "swiper/types";
 
 function TrendingSwiper() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -39,7 +38,7 @@ function TrendingSwiper() {
             />
           </div>
           {activeIndex === index ? (
-            <button className="bg-by-white/60 absolute bottom-0 left-0 right-0 w-full scale-125">
+            <button className="absolute bottom-0 left-0 right-0 w-full scale-125 bg-by-white/60">
               The Weeknd’s list
             </button>
           ) : (
