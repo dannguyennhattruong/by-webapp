@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Locale, i18n } from "../../../i18n.config";
 import Header from "./components/Header/header.component";
 import "../../styles/globals.css";
+import NextTopLoader from "nextjs-toploader";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -30,7 +31,16 @@ export default function RootLayout({
   return (
     <html lang={params.lang}>
       <body className={`${inter.className} h-screen max-h-screen`}>
-        <Header lang={params.lang} />
+        <NextTopLoader
+          color="#F79464"
+          initialPosition={0.08}
+          crawlSpeed={200}
+          height={3}
+          crawl={true}
+          showSpinner={true}
+          easing="ease"
+          speed={200}
+        />
         <main>{children}</main>
       </body>
     </html>

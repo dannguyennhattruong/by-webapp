@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Autoplay, FreeMode, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import banner from "/public/postbox_image.jpeg";
@@ -50,7 +49,7 @@ function TrendingSwiper() {
   };
   return (
     <div className="py-5">
-      <div className="">
+      <div className="trendy-swiper">
         <Swiper
           modules={[Navigation, FreeMode, Autoplay]}
           spaceBetween={50}
