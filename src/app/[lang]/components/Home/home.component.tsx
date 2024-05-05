@@ -5,7 +5,6 @@ import Account from "./Account";
 import StreamingUser from "./StreamingUser";
 import TrendingSwiper from "../Swipers/TrendingSwiper";
 import { sideBarItemList, sideBarMoreToolsList } from "./sidebarTabList";
-import Header from "../Header/header.component";
 import { Locale } from "../../../../../i18n.config";
 
 interface Props {
@@ -46,34 +45,31 @@ function HomePage({ contentLocale, lang }: Props) {
   };
 
   return (
-    <>
-      <Header lang={lang} />
-      <div className="h-auto bg-by-white pt-[58px]">
-        <div className="flex justify-between">
-          <div className="flex h-auto max-w-[5rem] flex-col justify-between bg-by-20-peach-fuzz p-6 text-by-darken-blue lg:max-w-[14rem]">
-            <div className="flex flex-col justify-between gap-5 pt-4">
-              {onRenderMainSideBar()}
-            </div>
-            <div className="flex flex-col justify-between gap-5">
-              {onRenderMoreToolsSideBar()}
-              <hr className="mx-auto my-4 h-[2px] w-full rounded border-0 bg-[#D9D9D9]" />
-              <p className="text-xs">
-                About . Help . Terms . Privacy . © 2024 Be yourself
-              </p>
-            </div>
+    <div className="h-auto bg-by-white pt-[58px]">
+      <div className="flex justify-between">
+        <div className="flex h-auto max-w-[5rem] flex-col justify-between bg-by-20-peach-fuzz p-6 text-by-darken-blue lg:max-w-[14rem]">
+          <div className="flex flex-col justify-between gap-5 pt-4">
+            {onRenderMainSideBar()}
           </div>
-          <div className="flex h-[calc(100vh-58px)] w-full flex-col gap-5 overflow-scroll px-8 py-5">
-            <PostBox />
-            <TrendingSwiper />
-            <PostBox />
-          </div>
-          <div className="flex h-auto w-[25rem] flex-col gap-3 py-3 pr-5 text-by-darken-blue">
-            <Account />
-            <StreamingUser />
+          <div className="flex flex-col justify-between gap-5">
+            {onRenderMoreToolsSideBar()}
+            <hr className="mx-auto my-4 h-[2px] w-full rounded border-0 bg-[#D9D9D9]" />
+            <p className="text-xs">
+              About . Help . Terms . Privacy . © 2024 Be yourself
+            </p>
           </div>
         </div>
+        <div className="flex h-[calc(100vh-58px)] w-full flex-col gap-5 overflow-scroll px-8 py-5">
+          <PostBox />
+          <TrendingSwiper />
+          <PostBox />
+        </div>
+        <div className="flex h-auto w-[25rem] flex-col gap-3 py-3 pr-5 text-by-darken-blue">
+          <Account />
+          <StreamingUser />
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 

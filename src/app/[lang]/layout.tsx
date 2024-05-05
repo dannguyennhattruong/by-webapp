@@ -41,6 +41,7 @@ export default function RootLayout({
           easing="ease"
           speed={200}
         />
+        <Header lang={params.lang} />
         <main>{children}</main>
       </body>
     </html>

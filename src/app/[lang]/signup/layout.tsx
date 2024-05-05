@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "BY | Sign up",
 };
 
-export default function RootLayout({
+export default function SignUpLayout({
   children,
 }: {
   children: React.ReactNode;

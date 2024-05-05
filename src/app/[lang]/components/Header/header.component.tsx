@@ -1,10 +1,17 @@
+"use client";
 import Link from "next/link";
 import { Locale } from "../../../../../i18n.config";
 import LocaleSwitcher from "./locale-switcher";
 import Logo from "../logo.component";
 import SearchInput from "../SearchInput/searchinput.component";
+import { usePathname } from "next/navigation";
 
 export default function Header({ lang }: { lang: Locale }) {
+  const pathname = usePathname();
+  const page = pathname.split("/")[2];
+  if (page === "login" || page === "signup") {
+    return <></>;
+  }
   return (
     <header className="fixed left-0 right-0 top-0 z-30 bg-by-white py-2 text-by-peach-fuzz shadow">
       <nav className="mx-auto flex items-center justify-between px-2 lg:px-8">

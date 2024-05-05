@@ -19,7 +19,7 @@
     "@types/negotiator": "^0.6.3",
     "axios": "^1.6.8",
     "negotiator": "^0.6.3",
-    "next": "14.2.1",
+    "next": "14.2.3",
     "nextjs-toploader": "^1.6.12",
     "react": "^18",
     "react-dom": "^18",
