@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import LogoBY from "/public/logo.png";
+import LogoBY from "/public/Logo.png";
+import Link from "next/link";
 
 function Logo() {
   return (
