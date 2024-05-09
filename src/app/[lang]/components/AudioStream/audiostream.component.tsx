@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
+import streamDefaultImg from "/public/default-audio-image.jpg";
 interface Props {
   contentLocale: {
     title: string;
@@ -43,7 +44,7 @@ function AudioStreamComponent({ contentLocale }: Props) {
           <div className="h-full overflow-hidden rounded-3xl lg:flex-[2]">
             <div className="relative h-full">
               <Image
-                src="/default-audio-image.jpg"
+                src={streamDefaultImg}
                 alt="Image audio"
                 width={5000}
                 height={5000}
