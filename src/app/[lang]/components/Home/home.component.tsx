@@ -4,25 +4,24 @@ import PostBox from "../PostBox/postbox.component";
 import Account from "./Account";
 import StreamingUser from "./StreamingUser";
 import TrendingSwiper from "../Swipers/TrendingSwiper";
-import {
-  sideBarItemList,
-  sideBarMoreToolsList,
-} from "../Header/sidebarTabList";
+import { sideBarItemList, sideBarMoreToolsList } from "./sidebarTabList";
+import { Locale } from "../../../../../i18n.config";
 
 interface Props {
   contentLocale: {
     title: string;
     description: string;
   };
+  lang: Locale;
 }
 
-function HomePage({ contentLocale }: Props) {
+function HomePage({ contentLocale, lang }: Props) {
   const onRenderMainSideBar = () => {
     return sideBarItemList.map((item) => {
       return (
         <div
           key={item.id}
-          className={`${item.isActive ? "text-by-orange" : ""} hover:text-by-orange mx-auto flex cursor-pointer items-center gap-5 transition-colors duration-300 lg:m-0`}
+          className={`${item.isActive ? "text-by-orange" : ""} mx-auto flex cursor-pointer items-center gap-5 transition-colors duration-300 hover:text-by-orange lg:m-0`}
         >
           {item.icon}
           <p className="hidden lg:block">{item.content}</p>
@@ -36,7 +35,7 @@ function HomePage({ contentLocale }: Props) {
       return (
         <div
           key={item.id}
-          className="hover:text-by-orange mx-auto flex cursor-pointer items-center gap-5 transition-colors duration-300 lg:m-0"
+          className="mx-auto flex cursor-pointer items-center gap-5 transition-colors duration-300 hover:text-by-orange lg:m-0"
         >
           {item.icon}
           <p className="hidden lg:block">{item.content}</p>
@@ -46,9 +45,9 @@ function HomePage({ contentLocale }: Props) {
   };
 
   return (
-    <div className="bg-by-white h-[calc(100vh-58px)]">
+    <div className="h-auto bg-by-white pt-[58px]">
       <div className="flex justify-between">
-        <div className="bg-by-20-peach-fuzz text-by-darken-blue flex h-[calc(100vh-58px)] max-w-[5rem] flex-col justify-between p-6 lg:max-w-[14rem]">
+        <div className="flex h-auto max-w-[5rem] flex-col justify-between bg-by-20-peach-fuzz p-6 text-by-darken-blue lg:max-w-[14rem]">
           <div className="flex flex-col justify-between gap-5 pt-4">
             {onRenderMainSideBar()}
           </div>
@@ -65,7 +64,7 @@ function HomePage({ contentLocale }: Props) {
           <TrendingSwiper />
           <PostBox />
         </div>
-        <div className="text-by-darken-blue flex h-[calc(100vh-58px)] w-[25rem] flex-col gap-3 py-3 pr-5">
+        <div className="flex h-auto w-[25rem] flex-col gap-3 py-3 pr-5 text-by-darken-blue">
           <Account />
           <StreamingUser />
         </div>

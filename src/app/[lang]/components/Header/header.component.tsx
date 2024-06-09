@@ -1,20 +1,24 @@
-import { getDictionary } from "@by-webapp/lib/dictionaries";
+"use client";
 import Link from "next/link";
 import { Locale } from "../../../../../i18n.config";
 import LocaleSwitcher from "./locale-switcher";
 import Logo from "../logo.component";
 import SearchInput from "../SearchInput/searchinput.component";
+import { usePathname } from "next/navigation";
 
-export default async function Header({ lang }: { lang: Locale }) {
-  const { navigation } = await getDictionary(lang);
-
+export default function Header({ lang }: { lang: Locale }) {
+  const pathname = usePathname();
+  const page = pathname.split("/")[2];
+  if (page === "login" || page === "signup") {
+    return <></>;
+  }
   return (
-    <header className="text-by-peach-fuzz bg-by-white sticky top-0 py-2 shadow">
+    <header className="fixed left-0 right-0 top-0 z-30 bg-by-white py-2 text-by-peach-fuzz shadow">
       <nav className="mx-auto flex items-center justify-between px-2 lg:px-8">
         <Logo />
         <Link
           href={`/${lang}`}
-          className="bg-by-peach-fuzz text-by-white hidden rounded-full px-10 py-2 md:block"
+          className="hidden rounded-full bg-by-peach-fuzz px-10 py-2 text-by-white md:block"
         >
           {/* {navigation.home} */}
           Newest
@@ -23,7 +27,7 @@ export default async function Header({ lang }: { lang: Locale }) {
         <SearchInput />
         <Link
           href={`/${lang}/audio-stream/123`}
-          className="border-by-peach-fuzz text-by-peach-fuzz bg-by-white hidden rounded-full border px-10 py-2 md:block "
+          className="hidden rounded-full border border-by-peach-fuzz bg-by-white px-10 py-2 text-by-peach-fuzz md:block "
         >
           {/* {navigation["audio-stream"]} */}
           Following
@@ -31,14 +35,14 @@ export default async function Header({ lang }: { lang: Locale }) {
         <div className="flex items-center gap-3">
           <LocaleSwitcher />
           <Link
-            href={`/${lang}/audio-stream/123`}
-            className="border-by-peach-fuzz bg-by-peach-fuzz text-by-white hidden rounded-lg border px-4 py-1 md:block "
+            href={`/${lang}/login`}
+            className="hidden rounded-lg border border-by-peach-fuzz bg-by-peach-fuzz px-4 py-1 text-by-white md:block "
           >
             Log in
           </Link>{" "}
           <Link
-            href={`/${lang}/audio-stream/123`}
-            className="border-by-peach-fuzz text-by-peach-fuzz bg-by-white hidden rounded-lg border px-4 py-1 md:block "
+            href={`/${lang}/signup`}
+            className="hidden rounded-lg border border-by-peach-fuzz bg-by-white px-4 py-1 text-by-peach-fuzz md:block "
           >
             Sign up
           </Link>

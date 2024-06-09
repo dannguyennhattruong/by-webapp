@@ -9,5 +9,5 @@ export default async function Home({
 }) {
   const { page } = await getDictionary(lang);
 
-  return <HomePage contentLocale={page.home} />;
+  return <HomePage contentLocale={page.home} lang={lang} />;
 }

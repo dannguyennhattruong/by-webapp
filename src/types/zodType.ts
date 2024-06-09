@@ -16,6 +16,7 @@ export const ZPostUser = z.object({
   userName: z.string(),
   password: z.string(),
   email: z.string().email(),
+  confirmPassword: z.string().optional(),
 });
 
 export const ZAudioAuthor = z.object({
@@ -60,4 +61,10 @@ export const ZDetailedAudio = z.object({
   views: z.number(),
   thumbnail: z.string().url().optional(),
   isStreaming: z.boolean(),
+});
+
+export const ZUserLogin = z.object({
+  email: z.string().email().optional(),
+  userName: z.string().optional(),
+  password: z.string(),
 });
