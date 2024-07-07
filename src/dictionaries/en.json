@@ -6,11 +6,45 @@
   "page": {
     "home": {
       "title": "Welcome to BY",
-      "description": "Audio Network"
+      "description": "Audio Network",
+      "highlight-card": {
+        "follow": "Follow",
+        "description": "Description",
+        "discuss": "Discuss"
+      }
     },
     "audio-stream": {
       "title": "Audio Stream",
       "description": "This is the Audio Stream page"
     }
+  },
+  "navigation-bar": {
+    "newest": "Newest",
+    "search": "Search",
+    "following": "Following",
+    "log-in": "Log in",
+    "sign-up": "Sign up"
+  },
+  "left-side-bar": {
+    "feeds": "Feeds",
+    "streaming-room": "Streaming room",
+    "explore": "Explore",
+    "friends": "Friends",
+    "groups": "Groups",
+    "playlist": "Playlist",
+    "create": "Create",
+    "switch-mode": "Switch mode",
+    "more": "More"
+  },
+  "left-side-bar--footer": {
+    "about": "About",
+    "help": "Help",
+    "terms": "Terms",
+    "privacy": "Privacy" 
+  },
+  "right-side-bar": {
+    "switch": "Switch",
+    "streaming-now": "Streaming now",
+    "views": "views"
   }
 }
