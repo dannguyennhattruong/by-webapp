@@ -8,6 +8,7 @@ export default async function Home({
   params: { lang: Locale };
 }) {
   const { page } = await getDictionary(lang);
+  console.log("test");
 
   return <HomePage contentLocale={page.home} lang={lang} />;
 }
